@@ -27,14 +27,16 @@
             <div class="col-sm col-lg-8 rounded shadow p-3 ml-2 mr-2" style="margin-top:100px; background-color:#f3f3f3" >
                 <h3 class="text-primary text-center"> Cakes & Treats </h3>
                 <hr>
+                <!-- <div class="alert alert-success" role="alert" id="message">
+                </div> -->
                 <form action="" method="post">
                     <div class="form-group">
                         <div class="row">
-                            <div class="col-4">
+                            <div class="col-3">
                                 Table Number
                             </div>
-                            <div class="col-8">
-                                <select class="form-control" id="table" required>
+                            <div class="col-9">
+                                <select class="form-control"  id="table" required>
                                     <option value="0" selected="selected" aria-required="true">select a table number</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
@@ -46,29 +48,24 @@
                     </div>
                     <div class="form-group">
                         <div class="row">
-                            <div class="col-4">
+                            <div class="col-3">
                                 Items
                             </div>
                             <div class="col-6">
                                 <select class="form-control" id="item" required>
-                                    <option value="0" selected="selected" aria-required="true">select an item</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
                                 </select>
                             </div>
                             <div class="col-1 p-0 pt-1 text-center">
                                 <i class="fa fa-close"></i>
                             </div>
-                            <div class="col-1">
+                            <div class="col-2">
                                 <input type="number" class="form-control" id="quantity" value="1">
                             </div>
                         </div>
                     </div>
                     <hr>
                     <div class="row justify-content-center">
-                        <button class="btn btn-primary text-center mr-2" id="additem"><i class="fa fa-plus">&nbsp; Add Item</i></button>
+                        <button class="btn btn-primary text-center mr-2" id="additem" onclick="grabValues()"><i class="fa fa-plus">&nbsp; Add Item</i></button>
                     </div>
                 </form>
             </div>
@@ -80,18 +77,15 @@
                     <div class="col-2">Cancel</div>
                 </div>
                 <hr>
-                <div class="row text-center">
-                    <div class="col-2" id="tableno"></div>
-                    <div class="col-6" id="itemname"></div>
-                    <div class="col-2" id="quantity"></div>
-                    <div class="col-2" id="delete"><i class="fa fa-trash text-danger"></i></div>
+                <div id="orderitems">
                 </div>
-                <hr>
                 <div class="row justify-content-center">
-                    <button class="btn btn-success text-center ml-2" id="order"><i class="fa fa-check">&nbsp; Place Order</i></button>
+                    <button class="btn btn-success text-center ml-2" id="order" onclick="placeOrder()"><i class="fa fa-check">&nbsp; Place Order</i></button>
                 </div>
             </div>
         </div>
     </div>
+    <script src="./init.js"></script>
+    <script src="./function.js"></script>
 </body>
 </html>
